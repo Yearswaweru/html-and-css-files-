@@ -1,0 +1,73 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+
+    background-color: rgb(178, 219, 225);
+    font-family: 'poppins', sans-serif;
+}
+img{
+    width: 70%;
+}
+.big-title{
+    color: rgb(80, 22, 180);
+    text-align: center;
+    padding: 1rem;
+}
+#main-title{
+    font-size: 5rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+h1{
+    color: rgb(217, 26, 26);
+}
+h4{
+    color: rgb(255, 0, 0);
+    text-align: center;
+}
+h2{
+    color: rgb(19, 214, 19);
+    text-align: center;
+}
+figure{
+    width: 90vw;
+    margin:auto;
+    background-color: rgb(33, 70, 95);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+figure img{
+    width: 90vw;
+    padding: 1rem;
+}
+figcaption{
+    margin-bottom: 1rem;
+}
+p{
+    padding: 1rem 4rm;
+}
+.list-item{
+    padding: 0;
+}
+ul{
+    padding: 1rem;
+    list-style: square;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+ul li{
+    padding-bottom: 1rem;
+}
+@media screen  and (min-width: 768px){
+   main{ padding: 0 6rem;
+   }
+}
+@media screen and (min-width: 1280px){
+    main{
+        padding: 0 10rem;
+    }
+    
+}
