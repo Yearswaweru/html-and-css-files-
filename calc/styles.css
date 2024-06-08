@@ -1,0 +1,26 @@
+body{
+    font-family: sans-serif;
+    text-align: center;
+    background-color: aqua;
+}
+h1{
+    font-size: 3em;
+    margin-bottom: 2em;
+    color: brown;
+}
+input[tyep="text"],select{
+    width: 200px;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #ccfd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+.button{
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: red;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
