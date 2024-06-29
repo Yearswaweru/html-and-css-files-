@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>feedback Form</title> 
+    <link rel="stylesheet" href="styles.css">  
+</head>
+<body bgcolor="aqua" text="darkblue">
+    <center>
+        <img src="political.webp" height="180" width="30%"/>
+    </center>
+    <form method="post" action="submit_feedback.php" enctype="multipart/form-data">
+        <fieldset>
+            <legend>FEEDBACK SUBMISSION</legend>
+            <p><b>name</b>: 
+                <input type="text"  name="name" required>
+            </p>
+            <p><b>email</b>: 
+                <input type="email"  name="email" required>
+            </p>
+            <p><b>feedback</b>: 
+                <textarea id="feedback" name="feedback" rows="4" cols="50">
+                   
+                </textarea>
+            </p>
+            <p><b>rating</b>: 
+                <select name="rating" id="rating">
+                    <option value="THE BEST">THE BEST</option>
+                    <option value="THE WORST">THE WORST</option>
+                    <option value="AVERAGE">AVERAGE</option>
+                    <option value="GOOD">GOOD</option>
+                    <option value="BAD">BAD</option>
+                </select>
+            </p>
+            <center>
+                <p>
+                    <input type="submit" value="SUBMIT FEEDBACK" />
+                </p>
+            </center>
+        </fieldset>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>
