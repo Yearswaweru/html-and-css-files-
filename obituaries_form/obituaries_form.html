@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obituaries Form</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        body {
+            background-image: url(Zu.webp);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        form {
+        width: 50%;
+        margin: 40px auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+ 
+        input, textarea {
+         width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+    }
+        fieldset {
+        border: none;
+        padding: 0;
+        margin: 0;
+    }
+       .container{
+        justify-content: center;
+        
+       }
+
+        legend {
+        font-size: 18px;
+        font-weight: bold;
+        color: rgb(228, 204, 45);
+    }
+        input[type="text"], input[type="date"], textarea {
+        width: 70%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+     }  
+
+        input[type="submit"] {
+        background-color: darkblue;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+  
+        input[type="submit"]:hover {
+        background-color: #333;
+    }
+    </style>
+    
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <img src="Zu.webp" height="180" width="30%" class="mx-auto d-block">
+        </div>
+        <form method="post" action="submit_obituary.php" id="obituaries_form">
+            <fieldset>
+                <legend>OBITUARY SUBMISSION</legend>
+                <div class="form-group">
+                    <label for="name"><b>Name</b>:</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="date_of_birth"><b>Date of Birth</b>:</label>
+                    <input type="date" class="form-control" id="date_of_birth" name="date_of_birth" required>
+                </div>
+                <div class="form-group">
+                    <label for="date_of_death"><b>Date of Death</b>:</label>
+                    <input type="date" class="form-control" id="date_of_death" name="date_of_death" required>
+                </div>
+                <div class="form-group">
+                    <label for="content"><b>Content</b>:</label>
+                    <textarea class="form-control" id="content" name="content" rows="4" cols="50" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="author"><b>Author</b>:</label>
+                    <input type="text" class="form-control" id="author" name="author" required>
+                </div>
+                <div class="text-center">
+                    <input type="submit" value="SUBMIT OBITUARY" class="btn btn-primary">
+                </div>
+            </fieldset>
+        </form>
+    </div>
+
+    <script>
+        const form = document.getElementById('obituaries_form');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('#name').value;
+            const date_of_birth = document.getElementById('#date_of_birth').value;
+            const date_of_death = document.getElementById('#date_of_death').value;
+            const content = document.getElementById('#content').value;
+            const author = document.getElementById('#author').value;
+
+            if (!name || !date_of_birth || !date_of_death || !content || !author) {
+                alert('Please fill in all fields');
+                return;
+            }
+
+            form.submit();
+        });
+    </script>
+</body>
+</html>
